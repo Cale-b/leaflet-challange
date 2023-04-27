@@ -82,7 +82,8 @@ function createMap(earthquakes) {
   };
   legend.addTo(map);
 }
-
+// I had issues with leaflet not loading the legend, got typererror t._controlCorners is undefined. Teacher/Tutor/Google/ and classmates
+//couldnt help, gave it my best shot.
 
   d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson").then(function(data){
     createMarkers(data)});
